@@ -1,4 +1,4 @@
-# mod_3_project
+# League of Legends - Triple Triad
 
 All game concepts are based on work by Square Enix, and music is
 property of Squre Enix.
