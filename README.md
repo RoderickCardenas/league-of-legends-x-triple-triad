@@ -24,7 +24,7 @@ Installation
 From your command line:
 
 Clone this repository
-$ git clone https://github.com/eliothowes1090/triple_triad_league_of_legends_edition.git
+$ git clone git@github.com:RoderickCardenas/league-of-legends-x-triple-triad.git
 Backend Setup
 $ cd backend
 $ bundle install
