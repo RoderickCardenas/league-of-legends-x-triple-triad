@@ -1,66 +1,43 @@
-# League of Legends - Triple Triad
+Triple Triad League of Legends Edition
+A card game based on the Final Fantasy VIII in game card game Triple Triad.
 
-All game concepts are based on work by Square Enix, and music is
-property of Squre Enix.
+Each player has a hand of five cards and takes turns placing them on a 3x3 grid. Cards have a number on each of their sides from 0-9 or 'A' which is 10. To beat your opponent, place a card so that your cards value is higher than your opponents cards value on the sides that touch one another. When a card is beaten it is flipped and belongs to the player that beat the card. At the end of the game the player with the highest score wins
 
-Characters and graphics are based on work from Riot Games and are property of Riot Games.
+Motivation
+@eliothowes1090 (contributor) and myself both loved playing the in game card game that was Triple Triad in the amazing Final Fantasy VIII
 
-Based on the Final Fantasy VIII card game Triple Triad.
-Built with Ruby on Rails Backend
-Single Page Frontend Using Vanilla JS
+To explore what it was like to build a game and to further our knowledge and skills in JavaScript we decided to relive our childhood and create our own version styled and themed using my love of League of Legends
 
-Models:
-- Users
-- UserGameCards
-- Games
-- Cards
+Screenshots and Demo
+Screenshots
+Screenshots of Triple Triage League of Legends Edition
 
+Demo
+Click to Watch Demo
 
-Relationships:
-						>— Games 
-User  —<  UserGameCards 				  
-						>—  Cards 		
+Tech/framework used
+Built with
 
-User
-has_many :user_game_cards
-has_many :games, through: :user_game_cards
-has_many :cards, through: :user_game_cards
+Ruby on Rails Backend
+Vanilla JavaScript Frontend (single page application)
+Installation
+From your command line:
 
+Clone this repository
+$ git clone https://github.com/eliothowes1090/triple_triad_league_of_legends_edition.git
+Backend Setup
+$ cd backend
+$ bundle install
+$ rails db:create db:migrate db:seed
+$ rails s
+Frontend Setup
+$ cd frontend
+$ npm install
+Run the app
+$ open index.html
+Once the app is running you can create an account and start playing
 
-User_Game_Card
-belongs_to :user
-belongs_to :game
-belongs_to :card
+Credits
+Project created and built with @eliothowes1090
 
-
-Game
-has_many :user_game_cards
-has_many :cards, through: :user_game_cards
-has_many :users, through: :user_game_cards
-
-Card
-has_many :user_game_cards
-has_many :games, through: :user_game_cards
-has_many :users, through: :user_game_cards
-
-
-MVP: 
-- [ ] User should be able to login and logout using username and email address
-- [ ] User should be able to see their results stats
-- [ ] There will be 10 cards with their values hard coded and they will be blank with no styling
-- [ ] User should be able to start a new game
-- [ ] User gets randomly assigned 5 cards as does a CPU
-- [ ] Randomly start with either user or cpu
-- [ ] User can select any of their 5 cards to play and positions this on the board
-- [ ] CPU picks random free position and random card to play
-- [ ] Game score is kept track of
-- [ ] Result is shown (win, draw, loss)
-- [ ] Can start a new game
-
-
-Stretch Goals:
-- [ ] Build logic/AI where CPU plays actual moves and selects appropriate cards
-- [ ] Styling of board and cards
-- [ ] Build more cards (increase from 10)
-- [ ] Have your card collection and take cards from CPU when you win
-- [ ] Progressively more difficult CPU
+All game concepts are based on work by Square Enix. Music is the property of Square Enix. Characters and graphics are based on work from Riot Games and are the property of Riot Games
